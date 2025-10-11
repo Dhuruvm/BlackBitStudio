@@ -20,9 +20,11 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16 gap-4">
           <Link href="/" data-testid="link-home">
             <a className="flex items-center gap-2 hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-all">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-chart-2 rounded-md flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">BB</span>
-              </div>
+              <img 
+                src="/attached_assets/9ff256f924f7193d007e9b6a2888b68e-1-removebg-preview_1760187759584.png" 
+                alt="BlackBIT Studio Logo" 
+                className="w-8 h-8"
+              />
               <span className="font-display font-bold text-lg">{siteConfig.studio.name}</span>
             </a>
           </Link>
