@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import FeatureCard from "@/components/FeatureCard";
 import StatsCounter from "@/components/StatsCounter";
+import MusicShowcase from "@/components/MusicShowcase";
 import BotShowcase from "@/components/BotShowcase";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -46,6 +47,7 @@ export default function Home() {
       </section>
 
       <StatsCounter stats={stats} />
+      <MusicShowcase />
       <BotShowcase />
       <CTASection />
       <Footer />

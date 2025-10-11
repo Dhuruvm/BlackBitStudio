@@ -18,8 +18,8 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-background/70 border-b border-border">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 gap-4">
-          <Link href="/" data-testid="link-home">
-            <a className="flex items-center gap-2 hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-all">
+          <Link href="/">
+            <a className="flex items-center gap-2 hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-all" data-testid="link-home">
               <img 
                 src="/attached_assets/9ff256f924f7193d007e9b6a2888b68e-1-removebg-preview_1760187759584.png" 
                 alt="BlackBIT Studio Logo" 
