@@ -6,6 +6,8 @@ import MusicShowcase from "@/components/MusicShowcase";
 import BotShowcase from "@/components/BotShowcase";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import AnimatedBackground from "@/components/AnimatedBackground";
+import ScrollProgress from "@/components/ScrollProgress";
 import { siteConfig } from "../../../site.config";
 
 export default function Home() {
@@ -17,7 +19,9 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <ScrollProgress />
+      <AnimatedBackground />
       <Navigation />
       <Hero />
       

@@ -1,8 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Check, ExternalLink } from "lucide-react";
 import { siteConfig } from "../../../site.config";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function BotShowcase() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   const features = [
     "Advanced moderation tools",
     "Auto-role and welcome system",
@@ -13,39 +18,67 @@ export default function BotShowcase() {
   ];
 
   return (
-    <section className="py-24">
+    <section ref={ref} className="py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-chart-2/10 border border-chart-2/20">
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.div
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-chart-2/10 border border-chart-2/20"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <span className="text-sm font-medium text-chart-2">All-in-One Solution</span>
-            </div>
+            </motion.div>
 
-            <h2 className="font-display font-bold text-4xl md:text-5xl">
+            <motion.h2
+              className="font-display font-bold text-4xl md:text-5xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
               Everything Your Server Needs
-            </h2>
+            </motion.h2>
 
-            <p className="text-muted-foreground text-lg">
+            <motion.p
+              className="text-muted-foreground text-lg"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               {siteConfig.bot.name} combines powerful moderation, entertainment, and utility features into one seamless experience. No need for multiple bots cluttering your server.
-            </p>
+            </motion.p>
 
             <div className="grid sm:grid-cols-2 gap-3 pt-4">
               {features.map((feature, index) => (
-                <div
+                <motion.div
                   key={feature}
-                  className="flex items-center gap-3 animate-slide-in-right"
-                  style={{ animationDelay: `${index * 50}ms` }}
+                  className="flex items-center gap-3"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.5, delay: 0.5 + index * 0.05 }}
                   data-testid={`feature-item-${index}`}
+                  whileHover={{ x: 5, transition: { duration: 0.2 } }}
                 >
                   <div className="w-5 h-5 rounded-full bg-chart-3/20 border border-chart-3/40 flex items-center justify-center flex-shrink-0">
                     <Check className="w-3 h-3 text-chart-3" />
                   </div>
                   <span className="text-sm font-medium">{feature}</span>
-                </div>
+                </motion.div>
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-3 pt-6">
+            <motion.div
+              className="flex flex-wrap gap-3 pt-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
               <Button
                 size="lg"
                 asChild
@@ -66,26 +99,40 @@ export default function BotShowcase() {
                   View on Top.gg
                 </a>
               </Button>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="relative animate-slide-in-right space-y-6" style={{ animationDelay: '200ms' }}>
-            <div className="relative rounded-2xl overflow-hidden border border-card-border">
+          <motion.div
+            className="relative space-y-6"
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <motion.div
+              className="relative rounded-2xl overflow-hidden border border-card-border"
+              whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+            >
               <img 
                 src="/attached_assets/IMG_20251011_185258_1760188997466.jpg"
                 alt="Cybork Discord Profile"
                 className="w-full h-auto"
               />
-            </div>
+            </motion.div>
             
-            <div className="relative rounded-2xl overflow-hidden border border-card-border">
+            <motion.div
+              className="relative rounded-2xl overflow-hidden border border-card-border"
+              whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
               <img 
                 src="/attached_assets/Screenshot_2025_1011_184711_1760188932591.jpg"
                 alt="Cybork Bot Commands"
                 className="w-full h-auto"
               />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

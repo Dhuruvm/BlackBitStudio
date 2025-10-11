@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, ArrowDown } from "lucide-react";
 import { siteConfig } from "../../../site.config";
+import { motion } from "framer-motion";
+import AnimatedCounter from "./AnimatedCounter";
 
 export default function Hero() {
   const scrollToFeatures = () => {
@@ -13,8 +15,31 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-chart-2/20" />
       
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-2/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+        <motion.div 
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div 
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-2/30 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+        />
       </div>
 
       <div className="absolute inset-0">
@@ -29,30 +54,81 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center">
-        <div className="space-y-8 animate-fade-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-            <div className="w-2 h-2 bg-primary rounded-full animate-glow-pulse" />
+        <div className="space-y-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20"
+          >
+            <motion.div 
+              className="w-2 h-2 bg-primary rounded-full"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.5, 1, 0.5],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
             <span className="text-sm font-medium text-primary">Product-Based Studio</span>
-          </div>
+          </motion.div>
 
-          <h1 className="font-display font-extrabold text-5xl md:text-6xl lg:text-8xl bg-gradient-to-r from-foreground via-primary to-chart-2 bg-clip-text text-transparent leading-tight">
-            {siteConfig.studio.name}
-          </h1>
+          <motion.h1 
+            className="font-display font-extrabold text-5xl md:text-6xl lg:text-8xl leading-tight"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <motion.span
+              className="bg-gradient-to-r from-foreground via-primary to-chart-2 bg-clip-text text-transparent inline-block"
+              animate={{
+                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              style={{
+                backgroundSize: "200% 200%",
+              }}
+            >
+              {siteConfig.studio.name}
+            </motion.span>
+          </motion.h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-medium">
+          <motion.p 
+            className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-medium"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             {siteConfig.studio.tagline}
-          </p>
+          </motion.p>
 
-          <div className="pt-4">
+          <motion.div 
+            className="pt-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
             <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl mb-4">
               Meet <span className="text-primary">{siteConfig.bot.name}</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {siteConfig.bot.description}
             </p>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+          <motion.div 
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             <Button
               size="lg"
               asChild
@@ -75,16 +151,31 @@ export default function Hero() {
                 View on Top.gg
               </a>
             </Button>
-          </div>
+          </motion.div>
 
-          <button
+          <motion.button
             onClick={scrollToFeatures}
             className="mt-16 inline-flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"
             data-testid="button-scroll-features"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            whileHover={{ scale: 1.05 }}
           >
             <span className="text-sm font-medium">Explore Features</span>
-            <ArrowDown className="w-5 h-5 animate-bounce" />
-          </button>
+            <motion.div
+              animate={{
+                y: [0, 10, 0],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <ArrowDown className="w-5 h-5" />
+            </motion.div>
+          </motion.button>
         </div>
       </div>
     </section>
