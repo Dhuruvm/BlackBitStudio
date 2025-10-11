@@ -69,36 +69,21 @@ export default function BotShowcase() {
             </div>
           </div>
 
-          <div className="relative animate-slide-in-right" style={{ animationDelay: '200ms' }}>
-            <div className="relative aspect-square bg-gradient-to-br from-primary/20 to-chart-2/20 rounded-2xl overflow-hidden border border-card-border">
-              <div className="absolute inset-0 flex items-center justify-center p-12">
-                <div className="w-full h-full bg-card/80 backdrop-blur-sm rounded-xl border border-card-border p-8 space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-chart-2 rounded-full" />
-                    <div>
-                      <div className="font-display font-bold text-lg">{siteConfig.bot.name}</div>
-                      <div className="text-sm text-muted-foreground">Online</div>
-                    </div>
-                  </div>
-                  <div className="space-y-2 pt-4">
-                    <div className="h-3 bg-muted rounded w-3/4" />
-                    <div className="h-3 bg-muted rounded w-1/2" />
-                    <div className="h-3 bg-primary/20 rounded w-2/3" />
-                  </div>
-                  <div className="pt-6 space-y-2">
-                    <div className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
-                      <span className="text-sm font-mono">/help</span>
-                      <span className="text-xs text-muted-foreground">Show commands</span>
-                    </div>
-                    <div className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
-                      <span className="text-sm font-mono">/moderation</span>
-                      <span className="text-xs text-muted-foreground">Server tools</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl" />
-              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-chart-2/20 rounded-full blur-3xl" />
+          <div className="relative animate-slide-in-right space-y-6" style={{ animationDelay: '200ms' }}>
+            <div className="relative rounded-2xl overflow-hidden border border-card-border">
+              <img 
+                src="/attached_assets/IMG_20251011_185258_1760188997466.jpg"
+                alt="Cybork Discord Profile"
+                className="w-full h-auto"
+              />
+            </div>
+            
+            <div className="relative rounded-2xl overflow-hidden border border-card-border">
+              <img 
+                src="/attached_assets/Screenshot_2025_1011_184711_1760188932591.jpg"
+                alt="Cybork Bot Commands"
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
