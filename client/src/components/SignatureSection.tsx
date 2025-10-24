@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { siteConfig } from "../../../site.config";
 
 export default function SignatureSection() {
   return (
@@ -11,19 +12,31 @@ export default function SignatureSection() {
           transition={{ duration: 0.6 }}
           className="max-w-[640px]"
         >
+          {siteConfig.signature.message && (
+            <p className="text-[16px] md:text-[18px] text-white/70 leading-relaxed mb-12">
+              {siteConfig.signature.message}
+            </p>
+          )}
+          
           <div className="mb-12">
             <div 
-              className="text-[48px] md:text-[64px] font-script text-white/90 mb-4"
-              style={{ fontFamily: "'Brush Script MT', cursive" }}
+              className="text-[56px] md:text-[72px] lg:text-[84px] text-white/90 mb-6"
+              style={{ 
+                fontFamily: "'Allura', 'Dancing Script', 'Great Vibes', 'Pacifico', cursive",
+                fontWeight: 400,
+                lineHeight: 0.9,
+                letterSpacing: '0.02em'
+              }}
+              data-testid="text-signature"
             >
-              Falooda
+              {siteConfig.signature.name}
             </div>
             <div className="space-y-1">
               <p className="text-[18px] text-white font-medium">
-                Falooda
+                {siteConfig.signature.name}
               </p>
               <p className="text-[14px] text-white/60">
-                Founder & CEO
+                {siteConfig.signature.title}
               </p>
             </div>
           </div>
