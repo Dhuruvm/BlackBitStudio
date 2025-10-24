@@ -20,7 +20,7 @@ export const siteConfig = {
     buttons: {
       primary: {
         text: "INVITE BOT",
-        url: "https://discord.com/api/oauth2/authorize?client_id=1379715904287412315&permissions=8&scope=bot",
+        url: "https://discord.com/oauth2/authorize?client_id=1379715904287412315&permissions=8&integration_type=0&scope=bot+applications.commands",
         openInNewTab: true,
       },
       secondary: {
