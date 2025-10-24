@@ -5,7 +5,7 @@ import botImage from "@assets/6741dec2028a76192726098e_Frame-2095584455_17612998
 
 export default function BlackBITHero() {
   return (
-    <section className="min-h-screen relative flex items-center justify-center px-6 md:px-12 pt-20 pb-20">
+    <section className="min-h-screen relative flex items-center justify-center px-6 md:px-12 pt-28 pb-20">
       <div className="max-w-screen-xl mx-auto w-full">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

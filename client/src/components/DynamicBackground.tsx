@@ -38,18 +38,22 @@ export default function DynamicBackground() {
         }}
       />
 
-      <div className="fixed bottom-0 left-0 right-0 h-[45vh] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-[1]" />
+      <div className="fixed bottom-0 left-0 right-0 h-[40vh] md:h-[45vh] overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent z-[1]" />
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black to-transparent z-[2]" />
+        <div className="absolute left-0 bottom-0 top-0 w-16 md:w-24 bg-gradient-to-r from-black to-transparent z-[2]" />
+        <div className="absolute right-0 bottom-0 top-0 w-16 md:w-24 bg-gradient-to-l from-black to-transparent z-[2]" />
         
-        <div className="relative w-full h-full flex items-end justify-between px-6 md:px-12 pb-12 z-[2]">
+        <div className="relative w-full h-full flex items-end justify-between px-4 md:px-12 pb-8 md:pb-12 z-[2]">
           <motion.div
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.8, ease: "easeOut" }}
             className="relative mb-0"
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-[3] pointer-events-none" />
-            <div className="absolute -inset-x-8 -inset-y-8 bg-gradient-to-r from-black via-transparent to-transparent z-[3] pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent z-[3] pointer-events-none" />
+            <div className="absolute -inset-x-12 -inset-y-12 bg-gradient-to-r from-black via-black/50 to-transparent z-[3] pointer-events-none" />
+            <div className="absolute -inset-12 bg-gradient-to-b from-transparent to-black z-[3] pointer-events-none" />
             
             <motion.div
               animate={{
@@ -62,11 +66,11 @@ export default function DynamicBackground() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="text-white/[0.12] font-mono text-[9px] md:text-[11px] lg:text-[12px] leading-[1.15] whitespace-pre select-none relative z-[2]"
+              className="text-white/[0.12] font-mono text-[7px] md:text-[11px] lg:text-[12px] leading-[1.15] whitespace-pre select-none relative z-[2]"
               style={{
-                filter: "blur(0.5px)",
-                maskImage: "radial-gradient(ellipse 200px 220px at bottom left, black 10%, rgba(0,0,0,0.5) 35%, rgba(0,0,0,0.2) 60%, transparent 80%)",
-                WebkitMaskImage: "radial-gradient(ellipse 200px 220px at bottom left, black 10%, rgba(0,0,0,0.5) 35%, rgba(0,0,0,0.2) 60%, transparent 80%)",
+                filter: "blur(0.6px)",
+                maskImage: "radial-gradient(ellipse 140px 180px at bottom left, black 5%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.15) 55%, transparent 75%)",
+                WebkitMaskImage: "radial-gradient(ellipse 140px 180px at bottom left, black 5%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.15) 55%, transparent 75%)",
               }}
             >
 {`.........................
@@ -95,8 +99,9 @@ export default function DynamicBackground() {
             transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
             className="relative mb-0"
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-[3] pointer-events-none" />
-            <div className="absolute -inset-x-8 -inset-y-8 bg-gradient-to-l from-black via-transparent to-transparent z-[3] pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent z-[3] pointer-events-none" />
+            <div className="absolute -inset-x-12 -inset-y-12 bg-gradient-to-l from-black via-black/50 to-transparent z-[3] pointer-events-none" />
+            <div className="absolute -inset-12 bg-gradient-to-b from-transparent to-black z-[3] pointer-events-none" />
             
             <motion.div
               animate={{
@@ -110,11 +115,11 @@ export default function DynamicBackground() {
                 ease: "easeInOut",
                 delay: 3,
               }}
-              className="text-white/[0.12] font-mono text-[9px] md:text-[11px] lg:text-[12px] leading-[1.15] whitespace-pre select-none relative z-[2]"
+              className="text-white/[0.12] font-mono text-[7px] md:text-[11px] lg:text-[12px] leading-[1.15] whitespace-pre select-none relative z-[2]"
               style={{
-                filter: "blur(0.5px)",
-                maskImage: "radial-gradient(ellipse 200px 220px at bottom right, black 10%, rgba(0,0,0,0.5) 35%, rgba(0,0,0,0.2) 60%, transparent 80%)",
-                WebkitMaskImage: "radial-gradient(ellipse 200px 220px at bottom right, black 10%, rgba(0,0,0,0.5) 35%, rgba(0,0,0,0.2) 60%, transparent 80%)",
+                filter: "blur(0.6px)",
+                maskImage: "radial-gradient(ellipse 140px 180px at bottom right, black 5%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.15) 55%, transparent 75%)",
+                WebkitMaskImage: "radial-gradient(ellipse 140px 180px at bottom right, black 5%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.15) 55%, transparent 75%)",
               }}
             >
 {`.........................
