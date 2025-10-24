@@ -41,8 +41,8 @@ export const siteConfig = {
     
     // Bot Statistics (update these values)
     stats: {
-      servers: "1,000+",
-      users: "500,000+",
+      servers: "100+",
+      users: "100,000+",
       commands: "100+",
       uptime: "99.9%",
     },
@@ -97,35 +97,7 @@ export const siteConfig = {
           demo: "https://top.gg/bot/1379715904287412315?s=0269a05424d03",
         },
       },
-      {
-        title: "E-Commerce Platform",
-        description: "Modern e-commerce solution with real-time inventory management and seamless payment integration.",
-        tags: ["React", "Next.js", "Stripe"],
-        featured: false,
-        links: {
-          github: "",
-          demo: "",
-        },
-      },
-      {
-        title: "AI Content Generator",
-        description: "Intelligent content generation tool powered by advanced AI models for marketing and creative writing.",
-        tags: ["AI/ML", "Python", "OpenAI"],
-        featured: false,
-        links: {
-          github: "",
-          demo: "",
-        },
-      },
-      {
-        title: "Project Management Tool",
-        description: "Collaborative project management platform with real-time updates and team communication features.",
-        tags: ["React", "WebSocket", "PostgreSQL"],
-        featured: false,
-        links: {
-          github: "",
-          demo: "",
-        },
+      
       },
     ],
   },
