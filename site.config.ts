@@ -183,7 +183,7 @@ export const siteConfig = {
     ],
     ctaButton: {
       text: "Get Started",
-      url: "https://discord.com/api/oauth2/authorize?client_id=1379715904287412315&permissions=8&scope=bot",
+      url: "https://discord.com/oauth2/authorize?client_id=1379715904287412315&permissions=8&integration_type=0&scope=bot+applications.commands",
       openInNewTab: true,
     },
   },
@@ -191,6 +191,6 @@ export const siteConfig = {
   // Legal
   legal: {
     companyName: "BlackBIT Studio",
-    lastUpdated: "2024",
+    lastUpdated: "2025",
   },
 };
