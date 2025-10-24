@@ -82,25 +82,25 @@ export const siteConfig = {
     ],
   },
 
-  // Projects Section
-  projects: {
-    title: "Featured Projects",
-    subtitle: "Explore our latest projects showcasing cutting-edge technology and innovative solutions.",
-    items: [
-      {
-        title: "Cybork Bot",
-        description: "All-in-one Discord bot with modern user-friendly UI. Features include moderation, music, games, and utility commands.",
-        tags: ["Discord Bot", "TypeScript", "Node.js"],
-        featured: true,
-        links: {
-          github: "", // Add GitHub URL or leave empty
-          demo: "https://top.gg/bot/1379715904287412315?s=0269a05424d03",
-        },
+const projects = {
+  title: "Featured Projects",
+  subtitle:
+    "Explore our latest projects showcasing cutting-edge technology and innovative solutions.",
+  items: [
+    {
+      title: "Cybork Bot",
+      description:
+        "All-in-one Discord bot with modern user-friendly UI. Features include moderation, music, games, and utility commands.",
+      tags: ["Discord Bot", "TypeScript", "Node.js"],
+      featured: true,
+      links: {
+        github: "", // Add GitHub URL or leave empty
+        demo: "https://top.gg/bot/1379715904287412315?s=0269a05424d03",
       },
-      
-      },
-    ],
-  },
+    },
+    // Add more project items here
+  ],
+};
 
   // About Us Section
   about: {
