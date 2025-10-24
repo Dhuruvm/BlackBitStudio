@@ -12,19 +12,6 @@ export default function BlackBITHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="inline-flex items-center gap-2 px-[18px] py-2 mb-8 bg-white/[0.03] backdrop-blur-sm border border-white/[0.08] rounded-full"
-            data-testid="badge-availability"
-          >
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-            <span className="text-[12px] text-white/70 font-medium tracking-[0.12em] uppercase">
-              2/5 SPOTS LEFT FOR NOVEMBER
-            </span>
-          </motion.div>
-          
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

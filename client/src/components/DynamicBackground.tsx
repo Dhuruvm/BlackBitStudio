@@ -93,7 +93,7 @@ export default function DynamicBackground() {
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
-            className="relative mb-0 hidden md:block"
+            className="relative mb-0"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-[3] pointer-events-none" />
             <div className="absolute -inset-x-8 -inset-y-8 bg-gradient-to-l from-black via-transparent to-transparent z-[3] pointer-events-none" />
