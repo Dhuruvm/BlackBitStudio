@@ -82,15 +82,13 @@ export const siteConfig = {
     ],
   },
 
-const projects = {
+projects: {
   title: "Featured Projects",
-  subtitle:
-    "Explore our latest projects showcasing cutting-edge technology and innovative solutions.",
+  subtitle: "Explore our latest projects showcasing cutting-edge technology and innovative solutions.",
   items: [
     {
       title: "Cybork Bot",
-      description:
-        "All-in-one Discord bot with modern user-friendly UI. Features include moderation, music, games, and utility commands.",
+      description: "All-in-one Discord bot with modern user-friendly UI. Features include moderation, music, games, and utility commands.",
       tags: ["Discord Bot", "TypeScript", "Node.js"],
       featured: true,
       links: {
@@ -98,10 +96,9 @@ const projects = {
         demo: "https://top.gg/bot/1379715904287412315?s=0269a05424d03",
       },
     },
-    // Add more project items here
-  ],
-};
 
+  ],
+},
   // About Us Section
   about: {
     title: "Building The Future",
