@@ -3,6 +3,7 @@ import { ExternalLink, ArrowDown } from "lucide-react";
 import { siteConfig } from "../../../site.config";
 import { motion } from "framer-motion";
 import AnimatedCounter from "./AnimatedCounter";
+import botImage from "@assets/6741dec2028a76192726098e_Frame-2095584455_1761299818346.webp";
 
 export default function Hero() {
   const scrollToFeatures = () => {
@@ -116,10 +117,10 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl mb-4">
-              Meet <span className="text-primary">{siteConfig.bot.name}</span>
+              Introducing <span className="text-primary">{siteConfig.bot.name}</span> bot
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {siteConfig.bot.description}
+              All in one bot comes with modern user-friendly UI
             </p>
           </motion.div>
 
@@ -136,7 +137,7 @@ export default function Hero() {
               data-testid="button-hero-invite"
             >
               <a href={siteConfig.bot.inviteUrl} target="_blank" rel="noopener noreferrer">
-                Invite to Discord
+                Invite Bot
               </a>
             </Button>
             <Button
@@ -151,6 +152,20 @@ export default function Hero() {
                 View on Top.gg
               </a>
             </Button>
+          </motion.div>
+
+          <motion.div
+            className="pt-12 max-w-5xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            <img 
+              src={botImage} 
+              alt="Cybork Bot Interface"
+              className="w-full h-auto rounded-lg"
+              data-testid="img-bot-showcase"
+            />
           </motion.div>
 
           <motion.button
